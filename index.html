@@ -3,13 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>AICLAWCHUHAI | 外贸获客 & WhatsApp开发客户工具</title>
+<title>AICLAWCHUHAI | 专业外贸获客与WhatsApp开发客户工具</title>
 <meta name="description" content="AICLAWCHUHAI 提供外贸获客软件、Google/WhatsApp开发客户方案、内容引流与SEO优化服务，助力企业快速找到海外客户并提升转化率。">
 <meta name="keywords" content="外贸获客, WhatsApp开发客户, Google找客户, 内容引流, 跨境营销, SEO, GEO优化">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://aiclawchuhai.shop/">
-
 <meta property="og:title" content="AICLAWCHUHAI | 外贸获客 & WhatsApp开发客户工具">
 <meta property="og:description" content="帮助企业提升外贸客户开发效率与询盘转化。">
 <meta property="og:type" content="website">
@@ -17,26 +15,26 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
 <style>
-/* ===== 通用样式 ===== */
+/* 通用 */
 *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;}
 body{background:#f5f9ff;color:#1e293b;line-height:1.8;}
 a{text-decoration:none;color:#2563eb;}
 a:hover{text-decoration:underline;}
 .container{max-width:1180px;margin:0 auto;padding:0 20px;}
 
-/* ===== Header ===== */
+/* Header */
 .site-header{position:sticky;top:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid #dbeafe;z-index:999;}
 .nav-wrap{display:flex;justify-content:space-between;align-items:center;height:72px;}
-.brand{font-size:24px;font-weight:800;color:#1d4ed8;}
+.brand{font-size:28px;font-weight:800;color:#1d4ed8;}
 .nav a{margin-left:18px;font-weight:600;font-size:15px;color:#334155;}
 .nav a:hover{color:#2563eb;}
 
-/* ===== 幻灯片 ===== */
-.hero-slider{position:relative;overflow:hidden;margin-bottom:50px;border-radius:16px;}
+/* 幻灯片 */
+.hero-slider{position:relative;overflow:hidden;border-radius:16px;margin-bottom:50px;}
 .slide{display:none;position:relative;transition:opacity 0.7s ease;}
 .slide.active{display:block;opacity:1;}
 .slide img{width:100%;border-radius:16px;}
-.slide-caption{position:absolute;bottom:20px;left:20px;background:rgba(0,0,0,0.5);color:#fff;padding:8px 12px;border-radius:8px;font-size:18px;}
+.slide-caption{position:absolute;bottom:20px;left:20px;background:rgba(0,0,0,0.5);color:#fff;padding:12px 16px;border-radius:8px;font-size:20px;}
 .slider-nav{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:8px;}
 .slider-dot{width:12px;height:12px;border-radius:50%;background:#fff;opacity:0.5;cursor:pointer;}
 .slider-dot.active{opacity:1;background:#2563eb;}
@@ -44,12 +42,12 @@ a:hover{text-decoration:underline;}
 .slider-arrow.left{left:10px;}
 .slider-arrow.right{right:10px;}
 
-/* ===== 卡片模块 ===== */
-.card,.case-card,.flow-card,.article-item{background:#fff;border-radius:16px;padding:24px;box-shadow:0 8px 24px rgba(15,23,42,.04);transition:transform 0.3s,box-shadow 0.3s;}
+/* 通用卡片 */
+.card,.case-card,.flow-card,.article-item,.faq-card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 8px 24px rgba(15,23,42,.04);transition:transform 0.3s,box-shadow 0.3s;}
 .card img,.case-card img,.flow-card img,.article-item img{width:100%;border-radius:12px;margin-bottom:12px;}
-.card h3,.case-card h3,.flow-card h3,.article-item h3{margin-bottom:10px;font-size:20px;color:#0f172a;}
-.card p,.case-card p,.flow-card p,.article-item p{color:#475569;}
-.card:hover,.case-card:hover,.flow-card:hover,.article-item:hover{transform:translateY(-6px);box-shadow:0 12px 36px rgba(0,0,0,0.12);}
+.card h3,.case-card h3,.flow-card h3,.article-item h3,.faq-card h3{margin-bottom:10px;font-size:20px;color:#0f172a;}
+.card p,.case-card p,.flow-card p,.article-item p,.faq-card p{color:#475569;}
+.card:hover,.case-card:hover,.flow-card:hover,.article-item:hover,.faq-card:hover{transform:translateY(-6px);box-shadow:0 12px 36px rgba(0,0,0,0.12);}
 
 /* 流程模块 */
 .flow-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;text-align:center;}
@@ -61,10 +59,18 @@ a:hover{text-decoration:underline;}
 .stat-item h3{font-size:28px;color:#2563eb;margin-bottom:6px;}
 .stat-item p{color:#475569;font-size:16px;}
 
+/* 文章模块 */
+.article-item a.read-more{display:inline-block;margin-top:8px;color:#2563eb;font-weight:600;opacity:0;transition:opacity 0.3s;}
+.article-item:hover a.read-more{opacity:1;}
+
+/* FAQ 手风琴 */
+.faq-card .answer{display:none;margin-top:8px;color:#475569;font-size:15px;}
+.faq-card.active .answer{display:block;}
+
 /* CTA */
-.cta{background:linear-gradient(135deg,#1d4ed8 0%,#2563eb 50%,#3b82f6 100%);color:#fff;}
+.cta{background:linear-gradient(135deg,#1d4ed8 0%,#2563eb 50%,#3b82f6 100%);color:#fff;padding:48px 0;}
 .cta-box{display:grid;grid-template-columns:1.2fr 0.8fr;gap:24px;align-items:start;}
-.cta-box a{color:#fff;display:block;margin-top:8px;}
+.cta-box a{color:#fff;display:block;margin-top:12px;}
 .cta-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:16px;padding:20px;}
 
 /* Footer */
@@ -106,63 +112,21 @@ a:hover{text-decoration:underline;}
 <div class="slider-nav"><span class="slider-dot active"></span><span class="slider-dot"></span><span class="slider-dot"></span></div>
 </section>
 
-<!-- 服务模块 -->
-<section id="services" class="section">
-<div class="container">
-<h2 class="section-title">我们的服务</h2>
-<p class="section-desc">覆盖外贸获客、Google/WhatsApp开发客户及内容引流多场景</p>
-<div class="grid-3">
-<div class="card"><img src="img/google-lead.jpg" alt="Google找客户"><h3>Google找客户</h3><p>通过精准搜索潜在客户，提高海外开发效率。</p></div>
-<div class="card"><img src="img/whatsapp-lead.jpg" alt="WhatsApp开发客户"><h3>WhatsApp开发客户</h3><p>即时沟通，提升转化率，实现高效成交闭环。</p></div>
-<div class="card"><img src="img/content-marketing.jpg" alt="内容引流"><h3>内容引流</h3><p>文章、FAQ、落地页结合，让客户主动找到你。</p></div>
-<div class="card"><img src="img/tiktok.jpg" alt="TikTok获客"><h3>TikTok/社媒矩阵</h3><p>短视频与社媒矩阵化发布，吸引海外精准流量。</p></div>
-<div class="card"><img src="img/saas-platform.jpg" alt="SaaS平台"><h3>AI全渠道SaaS平台</h3><p>整合短视频、社媒矩阵、群发、客服、询盘管理，形成完整获客系统。</p></div>
-<div class="card"><img src="img/seo.jpg" alt="SEO优化"><h3>SEO/GEO优化</h3><p>围绕城市、国家、行业做文章集群，提升搜索排名和曝光量。</p></div>
-</div>
+<!-- 示例模块：动态数字 -->
+<section class="section">
+<div class="container stats-grid">
+<div class="stat-item"><h3 class="stat-num">50</h3><p>覆盖国家</p></div>
+<div class="stat-item"><h3 class="stat-num">200+</h3><p>成功客户</p></div>
+<div class="stat-item"><h3 class="stat-num">500+</h3><p>日活潜在客户</p></div>
 </div>
 </section>
 
-<!-- 案例模块 -->
-<section id="cases" class="section">
-<div class="container">
-<h2 class="section-title">客户案例</h2>
-<p class="section-desc">展示我们帮助客户成功的实际案例</p>
-<div class="grid-3">
-<div class="case-card"><img src="img/case1.jpg" alt="客户A案例"><h3>客户A成功案例</h3><p>通过Google获客策略，客户海外开发效率提升50%，咨询量翻倍。</p></div>
-<div class="case-card"><img src="img/case2.jpg" alt="客户B案例"><h3>客户B成功案例</h3><p>WhatsApp群发结合智能筛选，客户转化率提升30%，成交额增长40%。</p></div>
-<div class="case-card"><img src="img/case3.jpg" alt="客户C案例"><h3>客户C成功案例</h3><p>短视频矩阵+社媒矩阵结合SEO内容，带来大量潜在客户咨询。</p></div>
-<div class="case-card"><img src="img/case4.jpg" alt="客户D案例"><h3>客户D成功案例</h3><p>内容引流+Telegram群组管理，使潜在客户主动联系企业，销售效率提升50%。</p></div>
-<div class="case-card"><img src="img/case5.jpg" alt="客户E案例"><h3>客户E成功案例</h3><p>AI SaaS整合平台实施，帮助客户统一管理海外询盘，减少人工成本。</p></div>
-<div class="case-card"><img src="img/case6.jpg" alt="客户F案例"><h3>客户F成功案例</h3><p>SEO+GEO优化落地页，关键词排名提升至首页，搜索流量显著增加。</p></div>
-</div>
-</div>
-</section>
-
-<!-- 文章模块 -->
-<section id="articles" class="section">
-<div class="container">
-<h2 class="section-title">相关文章</h2>
-<div class="grid-3">
-<div class="article-item"><img src="img/article1.jpg" alt="外贸找客户"><h3>外贸怎么找客户？5种有效方法</h3><p>分享海外客户开发流程、精准搜索技巧及联系方式管理方法。</p><a href="#" class="read-more">阅读全文</a></div>
-<div class="article-item"><img src="img/article2.jpg" alt="外贸获客方法"><h3>外贸获客方法有哪些？</h3><p>从传统方式到互联网获客方法，帮助企业建立系统化获客流程。</p><a href="#" class="read-more">阅读全文</a></div>
-<div class="article-item"><img src="img/article3.jpg" alt="Google找客户"><h3>如何用Google找客户？</h3><p>详细讲解外贸人如何通过Google搜索找到潜在客户并提升开发效率。</p><a href="#" class="read-more">阅读全文</a></div>
-<div class="article-item"><img src="img/article4.jpg" alt="WhatsApp开发客户"><h3>WhatsApp开发客户技巧</h3><p>分享AI工具群发、客户筛选与转化策略。</p><a href="#" class="read-more">阅读全文</a></div>
-<div class="article-item"><img src="img/article5.jpg" alt="内容引流获客"><h3>内容引流获客实战指南</h3><p>如何通过文章、FAQ和落地页引流，增加潜在客户访问量。</p><a href="#" class="read-more">阅读全文</a></div>
-<div class="article-item"><img src="img/article6.jpg" alt="TikTok获客"><h3>TikTok AI获客策略</h3><p>短视频矩阵发布与私域导流结合，实现内容转化最大化。</p><a href="#" class="read-more">阅读全文</a></div>
-</div>
-</div>
-</section>
-
-<!-- FAQ模块 -->
+<!-- FAQ模块示例 -->
 <section id="faq" class="section">
 <div class="container">
 <h2 class="section-title">常见问题</h2>
-<div class="card"><h3>外贸找客户最难的是什么？</h3><p>通常不是产品，而是没有稳定的客户来源，不知道如何持续找到精准客户。</p></div>
-<div class="card"><h3>为什么开发信越来越难做？</h3><p>竞争激烈、模板泛滥、客户注意力分散，传统方式效率下降。</p></div>
-<div class="card"><h3>如何提升WhatsApp开发客户转化率？</h3><p>通过群发、筛选、智能客服结合AI工具，优化沟通流程，提高转化率。</p></div>
-<div class="card"><h3>SEO与GEO优化对获客重要吗？</h3><p>合理布局文章、关键词、落地页和城市页，可显著提高搜索流量和潜在客户访问量。</p></div>
-<div class="card"><h3>如何快速建立私域客户池？</h3><p>通过Telegram群组、WhatsApp群发及内容引流，将潜在客户转化为私域资源。</p></div>
-<div class="card"><h3>AI SaaS平台能帮什么？</h3><p>整合社媒矩阵、短视频矩阵、群发、客服、CRM管理，实现全流程获客闭环。</p></div>
+<div class="faq-card"><h3>外贸找客户最难的是什么？</h3><div class="answer">通常不是产品，而是没有稳定的客户来源，不知道如何持续找到精准客户。</div></div>
+<div class="faq-card"><h3>如何提升WhatsApp开发客户转化率？</h3><div class="answer">通过群发、筛选、智能客服结合AI工具，优化沟通流程，提高转化率。</div></div>
 </div>
 </section>
 
@@ -181,7 +145,7 @@ a:hover{text-decoration:underline;}
 <ul>
 <li><a href="/">首页</a></li>
 <li><a href="/sitemap.xml">sitemap.xml</a></li>
-<li><a href="/robots.txt">robots.txt</a></li>
+<li><a href="/robots.txt">robots</a></li>
 </ul>
 </div>
 </div>
@@ -225,6 +189,12 @@ stats.forEach(stat=>{
     else{count+=speed;stat.innerText=count;}
   },30);
 });
+
+// FAQ 手风琴
+document.querySelectorAll('.faq-card h3').forEach(q=>{
+q.addEventListener('click',()=>{q.parentElement.classList.toggle('active');});
+});
 </script>
+
 </body>
 </html>
