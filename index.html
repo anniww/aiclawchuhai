@@ -1,231 +1,420 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<!-- 搜狗验证 → 放在最前面，必抓取 -->
-<meta name="sogou_site_verification" content="LiumeTyzrM" />
-<!-- 百度验证 -->
-<meta name="baidu-site-verification" content="codeva-dNe9QFIm20" />
-<!-- 必应验证 -->
-<meta name="msvalidate.01" content="71B8E03F761FFBC3839EAC336508AAD0" />
+  <meta name="sogou_site_verification" content="LiumeTyzrM">
+  <meta name="baidu-site-verification" content="codeva-dNe9QFIm20">
+  <meta name="msvalidate.01" content="71B8E03F761FFBC3839EAC336508AAD0">
 
-<title>AICLAWCHUHAI | AI出海获客与SEO增长官网</title>
-<meta name="description" content="AICLAWCHUHAI 聚焦 AI 出海获客、WhatsApp 引流、Telegram 导流、TikTok/社媒矩阵、SEO 与 GEO 内容增长，帮助企业做搜索排名与私域转化。" />
-<meta name="keywords" content="AI出海,SEO优化,GEO优化,WhatsApp引流,Telegram引流,TikTok获客,社媒矩阵,跨境营销,Cloudflare Pages" />
-<meta name="robots" content="index,follow,max-image-preview:large" />
-<meta name="author" content="AICLAWCHUHAI" />
-<link rel="canonical" href="https://aiclawchuhai.shop/" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="AICLAWCHUHAI | AI出海获客与SEO增长官网" />
-<meta property="og:description" content="为 AI 出海、跨境获客、WhatsApp 私域转化与搜索排名打造的企业官网落地页。" />
-<meta property="og:url" content="https://aiclawchuhai.shop/" />
-<meta property="og:site_name" content="AICLAWCHUHAI" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="theme-color" content="#0b1220" />
-<link rel="stylesheet" href="/styles.css" />
-<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <title>外贸获客软件_外贸找客户_WhatsApp开发客户工具 - AICLAWCHUHAI</title>
+  <meta name="description" content="AICLAWCHUHAI 提供外贸获客软件、外贸找客户方法、WhatsApp开发客户方案与SEO内容增长服务，帮助企业提升客户开发效率与询盘转化。">
+  <meta name="keywords" content="外贸获客软件,外贸找客户,外贸客户开发,WhatsApp开发客户,Google找客户,外贸工具,外贸开发信">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="AICLAWCHUHAI">
+  <link rel="canonical" href="https://aiclawchuhai.shop/">
 
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"Organization",
-"name":"AICLAWCHUHAI",
-"url":"https://aiclawchuhai.shop/",
-"logo":"https://aiclawchuhai.shop/favicon.svg",
-"contactPoint":[{"@type":"ContactPoint","contactType":"sales","url":"https://t.me/aiclawchuhai"},{"@type":"ContactPoint","contactType":"sales","url":"https://wa.me/85252195605"}],
-"sameAs":["https://t.me/aiclawchuhai","https://wa.me/85252195605"]
-}
-</script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="外贸获客软件_外贸找客户_WhatsApp开发客户工具 - AICLAWCHUHAI">
+  <meta property="og:description" content="帮助企业提升外贸客户开发效率与询盘转化。">
+  <meta property="og:url" content="https://aiclawchuhai.shop/">
+  <meta property="og:site_name" content="AICLAWCHUHAI">
 
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"WebSite",
-"name":"AICLAWCHUHAI",
-"url":"https://aiclawchuhai.shop/",
-"potentialAction":{"@type":"SearchAction","target":"https://aiclawchuhai.shop/?q={search_term_string}","query-input":"required name=search_term_string"}
-}
-</script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      color: #0f172a;
+      background: #f8fafc;
+      line-height: 1.8;
+    }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    .site-header { background: #0f172a; color: #fff; position: sticky; top: 0; }
+    .nav-wrap {
+      min-height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand { color: #fff; font-size: 22px; font-weight: 800; }
+    .nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    .nav a { color: #cbd5e1; }
+    .hero { background: linear-gradient(135deg,#0f172a 0%,#1e293b 100%); color: #fff; padding: 72px 0; }
+    .hero-grid { display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 28px; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(59,130,246,.14);
+      color: #bfdbfe;
+      margin-bottom: 12px;
+    }
+    h1 { font-size: 42px; line-height: 1.25; margin: 0 0 16px; }
+    h2 { font-size: 30px; line-height: 1.35; margin: 0 0 14px; }
+    h3 { font-size: 20px; line-height: 1.4; margin: 0 0 10px; }
+    .lead { font-size: 17px; color: #dbeafe; margin-bottom: 18px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+    .btn-primary { background: #2563eb; color: #fff; }
+    .btn-secondary { background: #fff; color: #0f172a; }
+    .hero-card, .card, .faq-item {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.04);
+    }
+    .hero-card p { margin: 0 0 10px; color: #334155; }
+    .section { padding: 64px 0; }
+    .section-desc { margin: 0 0 26px; color: #475569; }
+    .grid-2, .grid-3 {
+      display: grid;
+      gap: 20px;
+    }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .card p, .card li, .faq-item p { color: #475569; }
+    .card ul { margin: 10px 0 0; padding-left: 20px; }
+    .article-item {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .article-item p { color: #475569; margin: 0 0 8px; }
+    .faq-item { margin-bottom: 14px; }
+    .cta { background: #0f172a; color: #fff; }
+    .cta p { color: #cbd5e1; }
+    .cta-box { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; }
+    .contact-card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 18px;
+      padding: 22px;
+    }
+    .contact-card ul { margin: 10px 0 0; padding-left: 18px; }
+    .contact-card li, .contact-card a { color: #dbeafe; }
+    .site-footer { background: #020617; color: #94a3b8; padding: 28px 0; }
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 14px; }
+    .footer-links a { color: #93c5fd; }
+    @media (max-width: 900px) {
+      .hero-grid, .grid-2, .grid-3, .cta-box { grid-template-columns: 1fr; }
+      h1 { font-size: 32px; }
+      h2 { font-size: 26px; }
+    }
+  </style>
 
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"AICLAWCHUHAI",
+    "url":"https://aiclawchuhai.shop/"
+  }
+  </script>
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/">AICLAWCHUHAI</a>
+      <nav class="nav">
+        <a href="/">首页</a>
+        <a href="#pain">外贸痛点</a>
+        <a href="#services">解决方案</a>
+        <a href="#people">适合谁用</a>
+        <a href="#articles">文章内容</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </div>
+  </header>
 
-<header class="site-header">
-<div class="container nav">
-<a class="brand" href="/">AICLAWCHUHAI</a>
-<nav>
-<a href="#services">服务</a>
-<a href="#seo">SEO/GEO</a>
-<a href="#articles">文章</a>
-<a href="#contact">联系</a>
-</nav>
-</div>
-</header>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">外贸找客户 · 外贸获客软件 · WhatsApp开发客户</p>
+          <h1>帮企业解决外贸找客户难、开发效率低、询盘少的问题</h1>
+          <p class="lead">
+            AICLAWCHUHAI 提供外贸获客方法、客户开发思路、Google找客户方案、WhatsApp开发客户路径与内容增长支持，
+            帮助企业更高效地获取潜在客户，提升开发效率，并把搜索流量逐步变成咨询线索。
+          </p>
+          <p class="lead">
+            如果你正在做外贸、跨境业务、工厂出海或者海外客户开发，这个网站的内容会更适合你。
+            这里不只是放一个官网，而是围绕“找客户、开发客户、提升效率、提高转化”做内容布局。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#articles">先看文章内容</a>
+            <a class="btn btn-secondary" href="#contact">查看站内快链</a>
+          </div>
+        </div>
 
-<main>
-<section class="hero">
-<div class="container hero-grid">
-<div>
-<p class="eyebrow">AI 出海获客 · 搜索增长 · 私域转化</p>
-<h1>为 <span>AI出海品牌</span> 打造可收录、可排名、可转化的企业官网</h1>
-<p class="lead">
-AICLAWCHUHAI 专注做企业官网落地页、SEO/GEO 内容布局、文章集群与私域导流。
-目标不是只做一个好看网站，而是把搜索流量、社媒流量和咨询线索持续导到你的 Telegram、WhatsApp 和微信。
-</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="https://t.me/aiclawchuhai" target="_blank" rel="noopener">进入 Telegram</a>
-<a class="btn btn-secondary" href="https://wa.me/85252195605" target="_blank" rel="noopener">WhatsApp 咨询</a>
-</div>
-<ul class="trust-list">
-<li>适配 GitHub + Cloudflare Pages 部署</li>
-<li>结构化数据与基础 SEO 已配置</li>
-<li>支持文章中心与后续持续扩展</li>
-</ul>
-</div>
-<aside class="hero-card">
-<h2>快速联系</h2>
-<a href="https://t.me/aiclawchuhai" target="_blank" rel="noopener">Telegram：@aiclawchuhai</a>
-<a href="https://wa.me/85252195605" target="_blank" rel="noopener">WhatsApp：+852 5219 5605</a>
-<a href="weixin://dl/chat?17276592029">微信：17276592029</a>
-<p>适合做外贸、跨境、AI SaaS、私域成交、品牌关键词排名。</p>
-</aside>
-</div>
-</section>
+        <aside class="hero-card">
+          <h3>外贸获客常见问题</h3>
+          <p>每天发开发信，却几乎没有回复。</p>
+          <p>平台竞争激烈，询盘越来越少。</p>
+          <p>不知道怎么找到真正有需求的客户。</p>
+          <p>想提高效率，但没有更系统的方法。</p>
+          <p>做了很多动作，但始终没有形成稳定获客流程。</p>
+        </aside>
+      </div>
+    </section>
 
-<section class="section">
-<div class="container">
-<div class="section-head">
-<p class="eyebrow">定位</p>
-<h2>不是模板站，而是围绕搜索排名和引流转化搭建</h2>
-</div>
-<div class="grid-3">
-<article class="card">
-<h3>搜索引擎收录友好</h3>
-<p>包含语义化标题、描述、Open Graph、JSON-LD、站点地图、robots 与清晰内链结构，方便 Google 等搜索引擎抓取。</p>
-</article>
-<article class="card">
-<h3>文章中心可持续更新</h3>
-<p>预置文章目录，后续你只需要持续加内容，就可以围绕 AI 出海、跨境获客、WhatsApp 营销等关键词做内容覆盖。</p>
-</article>
-<article class="card">
-<h3>私域导流明确</h3>
-<p>首页、服务页、文章页都带 Telegram、WhatsApp、微信 CTA，缩短用户从搜索到咨询的路径。</p>
-</article>
-</div>
-</div>
-</section>
+    <section id="pain" class="section">
+      <div class="container">
+        <h2>外贸找客户，为什么越来越难？</h2>
+        <p class="section-desc">
+          很多企业不是没有产品，也不是没有市场，而是没有形成稳定的客户获取方式。
+          传统方式越来越卷，客户注意力越来越分散，获客效率下降是大多数外贸团队都会遇到的问题。
+        </p>
 
-<section id="services" class="section section-dark">
-<div class="container">
-<div class="section-head">
-<p class="eyebrow">核心服务</p>
-<h2>围绕 AI 出海获客搭建的业务展示结构</h2>
-</div>
-<div class="grid-2">
-<article class="card card-dark">
-<h3>TikTok AI 获客</h3>
-<p>展示 TikTok 矩阵、AI 视频翻译、AI 混剪、产品数字人、矩阵发布与私信导流，承接短视频增长需求。</p>
-</article>
-<article class="card card-dark">
-<h3>WhatsApp AI 广告与拓客</h3>
-<p>突出 WhatsApp AI 广告、AI 采集、AI 筛选、AI 群发、智能客服和成交闭环，适合海外私域转化场景。</p>
-</article>
-<article class="card card-dark">
-<h3>社媒 AI 矩阵</h3>
-<p>覆盖 Facebook、Instagram、Twitter、Telegram、YouTube、Google SEO 等全渠道矩阵化曝光与采集。</p>
-</article>
-<article class="card card-dark">
-<h3>AI 全渠道 SaaS 平台</h3>
-<p>把短视频矩阵、社媒矩阵、广告投放、群发、客服、询盘承接整合成一个完整的获客系统。</p>
-</article>
-</div>
-</div>
-</section>
+        <div class="grid-3">
+          <article class="card">
+            <h3>开发信越来越难做</h3>
+            <p>同质化严重、模板化严重、竞争过高，导致开发信回复率越来越低。很多团队投入很多时间，却得不到足够回报。</p>
+          </article>
+          <article class="card">
+            <h3>平台依赖风险大</h3>
+            <p>如果过度依赖单一平台，一旦流量波动或规则变化，询盘量和客户来源就会受到很大影响。</p>
+          </article>
+          <article class="card">
+            <h3>开发效率太低</h3>
+            <p>手动找客户、手动筛选、手动联系，流程很长，成本很高，也不利于持续放大。</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section id="seo" class="section">
-<div class="container">
-<div class="section-head">
-<p class="eyebrow">SEO / GEO</p>
-<h2>这套站点已经预留好后续做排名的基础骨架</h2>
-</div>
-<div class="grid-2">
-<div class="card">
-<h3>SEO 基础</h3>
-<ul class="list">
-<li>首页标题、描述、关键词已配置</li>
-<li>语义化 H1/H2/H3 结构</li>
-<li>文章页支持单独索引</li>
-<li>站点地图 sitemap.xml 与 robots.txt</li>
-<li>Schema 结构化数据</li>
-</ul>
-</div>
-<div class="card">
-<h3>GEO 内容建议</h3>
-<ul class="list">
-<li>围绕城市、国家、行业做落地页扩展</li>
-<li>围绕「AI出海 + 行业词」做文章集群</li>
-<li>围绕 Telegram / WhatsApp 场景做问答页</li>
-<li>持续沉淀案例、教程、解决方案页</li>
-<li>让搜索流量直接落到可咨询页面</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
+    <section id="services" class="section">
+      <div class="container">
+        <h2>更有效的外贸获客方式</h2>
+        <p class="section-desc">
+          找客户不是拼谁发得多，而是拼谁的方法更准、更稳、更可持续。
+        </p>
 
-<section id="articles" class="section">
-<div class="container">
-<div class="section-head">
-<p class="eyebrow">内容中心</p>
-<h2>预置 3 篇可收录文章，方便继续扩展内容矩阵</h2>
-</div>
-<div class="grid-3">
-<article class="card">
-<h3><a href="/articles/ai-chuhai-seo-guide.html">AI 出海官网怎么做 SEO 与 GEO 排名</a></h3>
-<p>讲清楚首页、服务页、文章页、地域页如何分工，适合后续持续做搜索覆盖。</p>
-</article>
-<article class="card">
-<h3><a href="/articles/whatsapp-lead-generation.html">WhatsApp 引流落地页怎么提升咨询转化</a></h3>
-<p>围绕海外客户沟通、按钮布局、咨询路径与内容承接做转化优化。</p>
-</article>
-<article class="card">
-<h3><a href="/articles/tiktok-ai-growth.html">TikTok AI 获客与私域导流的内容布局</a></h3>
-<p>适合把短视频流量、搜索流量与私域咨询结合起来做增长。</p>
-</article>
-</div>
-</div>
-</section>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Google 找客户</h3>
+            <p>通过关键词、国家、行业组合搜索找到潜在客户，而不是盲目群发。适合想提升精准度和开发效率的团队。</p>
+            <ul>
+              <li>关键词定位更清晰</li>
+              <li>可筛选潜在客户</li>
+              <li>有利于提高开发质量</li>
+            </ul>
+          </article>
 
-<section id="contact" class="section cta">
-<div class="container cta-box">
-<div>
-<p class="eyebrow">立即咨询</p>
-<h2>把流量导到能成交的地方</h2>
-<p>你当前的核心目标是做引流和搜索排名，这个站已经按这个目标去搭结构了。接下来只需要持续补内容、发案例、扩关键词页。</p>
-</div>
-<div class="cta-actions">
-<a class="btn btn-primary" href="https://t.me/aiclawchuhai" target="_blank" rel="noopener">Telegram</a>
-<a class="btn btn-secondary" href="https://wa.me/85252195605" target="_blank" rel="noopener">WhatsApp</a>
-<span class="wechat">微信：17276592029</span>
-</div>
-</div>
-</section>
-</main>
+          <article class="card">
+            <h3>WhatsApp 开发客户</h3>
+            <p>相比邮件，WhatsApp 更直接，更快，也更适合建立信任和跟进。适合做持续沟通和转化。</p>
+            <ul>
+              <li>回复速度更快</li>
+              <li>更适合建立联系</li>
+              <li>更利于长期跟进</li>
+            </ul>
+          </article>
 
-<footer class="site-footer">
-<div class="container footer-grid">
-<div>
-<strong>AICLAWCHUHAI</strong>
-<p>AI出海获客、SEO增长、私域转化企业官网。</p>
-</div>
-<div>
-<a href="/sitemap.xml">sitemap.xml</a>
-<a href="/robots.txt">robots.txt</a>
-</div>
-</div>
-</footer>
+          <article class="card">
+            <h3>内容引流与搜索布局</h3>
+            <p>通过文章、FAQ、落地页和内容更新，让客户先通过搜索看到你，而不是完全依赖主动开发。</p>
+            <ul>
+              <li>适合长期积累流量</li>
+              <li>利于提高信任感</li>
+              <li>搜索引擎更容易抓取</li>
+            </ul>
+          </article>
 
+          <article class="card">
+            <h3>工具提升客户开发效率</h3>
+            <p>当客户开发从手工模式转向更系统的流程，效率和稳定性都会明显提高。</p>
+            <ul>
+              <li>减少重复劳动</li>
+              <li>提高找客户效率</li>
+              <li>帮助形成可复制流程</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="people" class="section">
+      <div class="container">
+        <h2>适合哪些用户？</h2>
+        <p class="section-desc">
+          如果你属于下面这些类型，这个网站的内容会更有参考价值。
+        </p>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>外贸公司</h3>
+            <p>希望找到更稳定的客户来源，降低对平台的单一依赖，建立持续获客能力。</p>
+          </article>
+          <article class="card">
+            <h3>工厂与制造企业</h3>
+            <p>有产品、有供应能力，但缺少客户开发系统，希望更高效找到海外客户。</p>
+          </article>
+          <article class="card">
+            <h3>跨境业务团队</h3>
+            <p>需要同时兼顾内容、搜索、私域和客户开发效率，希望流程更清晰。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>为什么首页内容要更丰富？</h2>
+        <p class="section-desc">
+          因为 Google、百度、必应这些搜索引擎不是只看标题，它们还会看页面正文是否足够完整、主题是否清晰、有没有上下文和内部链接。
+          首页越清楚、越完整，搜索引擎越容易理解你的网站在讲什么。
+        </p>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>对 Google 更友好</h3>
+            <p>内容更完整、主题更集中、层级更清晰，更利于 Google 抓取和理解页面。</p>
+          </article>
+          <article class="card">
+            <h3>对中文用户更友好</h3>
+            <p>用户进入首页后，能更快知道你做什么、适合谁、下一步该看什么内容。</p>
+          </article>
+          <article class="card">
+            <h3>对转化更友好</h3>
+            <p>用户先看首页，再看文章，再形成信任，这样更容易逐步转化成咨询。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="articles" class="section">
+      <div class="container">
+        <h2>外贸找客户相关文章</h2>
+        <p class="section-desc">
+          下面这些文章既适合用户阅读，也适合搜索引擎理解你的网站主题。建议持续补充相关内容。
+        </p>
+
+        <article class="article-item">
+          <h3><a href="/articles/waimao-zhao-kehu.html">外贸怎么找客户？5种有效方法</a></h3>
+          <p>适合新手和企业了解外贸找客户的常见方法、常见问题和基础思路。</p>
+          <a href="/articles/waimao-zhao-kehu.html">查看文章</a>
+        </article>
+
+        <article class="article-item">
+          <h3><a href="/articles/waimao-huoke-fangfa.html">外贸获客方法有哪些？</a></h3>
+          <p>从传统方式到互联网获客方式，帮助企业建立系统化获客思路。</p>
+          <a href="/articles/waimao-huoke-fangfa.html">查看文章</a>
+        </article>
+
+        <article class="article-item">
+          <h3><a href="/articles/google-zhao-kehu.html">如何用Google找客户？</a></h3>
+          <p>详细讲解外贸人如何通过 Google 搜索找到潜在客户并提升开发效率。</p>
+          <a href="/articles/google-zhao-kehu.html">查看文章</a>
+        </article>
+
+        <article class="article-item">
+          <h3><a href="/articles/waimao-kaifa-kehu.html">外贸开发客户的实用技巧</a></h3>
+          <p>从客户定位、沟通方式、持续跟进等角度，提升客户开发质量和成交率。</p>
+          <a href="/articles/waimao-kaifa-kehu.html">查看文章</a>
+        </article>
+
+        <article class="article-item">
+          <h3><a href="/articles/waimao-gongju.html">外贸找客户工具推荐</a></h3>
+          <p>了解常见工具类型，以及为什么越来越多企业开始重视效率提升。</p>
+          <a href="/articles/waimao-gongju.html">查看文章</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <h2>常见问题 FAQ</h2>
+
+        <div class="faq-item">
+          <h3>外贸找客户最难的是什么？</h3>
+          <p>通常不是产品，而是没有稳定的客户来源，不知道如何持续找到精准客户。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>为什么开发信越来越难做？</h3>
+          <p>因为竞争高、模板多、客户注意力分散，传统方式的效率已经明显下降。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>为什么要做 Google 抓取友好的首页？</h3>
+          <p>因为首页是搜索引擎理解网站主题的重要入口，内容越完整，抓取和收录的基础越好。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>为什么首页不能只放功能介绍？</h3>
+          <p>因为用户先关心的是你能不能解决问题，而不是你有多少功能按钮。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>为什么要持续更新文章？</h3>
+          <p>持续更新会告诉搜索引擎你的网站是活跃的，也更容易覆盖更多搜索词和长尾流量。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section cta">
+      <div class="container cta-box">
+        <div>
+          <p class="eyebrow">下一步</p>
+          <h2>想让 Google 更快理解你的网站，首页和文章都要一起做</h2>
+          <p>
+            只有首页，不够。只有文章，也不够。更好的做法是：首页负责承接和解释主题，文章负责覆盖更多搜索问题。
+          </p>
+          <p>
+            你现在已经有中文文章基础，接下来持续增加内容、保持内链、提交 sitemap，Google 抓取会更顺。
+          </p>
+        </div>
+
+        <aside class="contact-card">
+          <h3>站内快链</h3>
+          <ul>
+            <li><a href="/sitemap.xml">查看 sitemap.xml</a></li>
+            <li><a href="/robots.txt">查看 robots.txt</a></li>
+            <li><a href="/articles/waimao-zhao-kehu.html">查看外贸找客户文章</a></li>
+            <li><a href="/articles/google-zhao-kehu.html">查看 Google 找客户文章</a></li>
+            <li><a href="/articles/waimao-gongju.html">查看外贸工具文章</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>
+        <strong>AICLAWCHUHAI</strong>
+        <div>外贸获客软件 · 外贸找客户 · 外贸客户开发 · WhatsApp开发客户</div>
+      </div>
+      <div class="footer-links">
+        <a href="/">首页</a>
+        <a href="/sitemap.xml">站点地图</a>
+        <a href="/robots.txt">robots</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
