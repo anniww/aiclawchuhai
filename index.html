@@ -1,591 +1,230 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="sogou_site_verification" content="LiumeTyzrM">
-  <meta name="baidu-site-verification" content="codeva-dNe9QFIm20">
-  <meta name="msvalidate.01" content="71B8E03F761FFBC3839EAC336508AAD0">
+<title>AICLAWCHUHAI | 外贸获客 & WhatsApp开发客户工具</title>
+<meta name="description" content="AICLAWCHUHAI 提供外贸获客软件、Google/WhatsApp开发客户方案、内容引流与SEO优化服务，助力企业快速找到海外客户并提升转化率。">
+<meta name="keywords" content="外贸获客, WhatsApp开发客户, Google找客户, 内容引流, 跨境营销, SEO, GEO优化">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://aiclawchuhai.shop/">
 
-  <title>外贸获客软件_外贸找客户_WhatsApp开发客户工具 - AICLAWCHUHAI</title>
-  <meta name="description" content="AICLAWCHUHAI 提供外贸获客软件、外贸找客户方法、WhatsApp开发客户方案与SEO内容增长服务，帮助企业提升客户开发效率与询盘转化。">
-  <meta name="keywords" content="外贸获客软件,外贸找客户,外贸客户开发,WhatsApp开发客户,Google找客户,外贸工具">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="author" content="AICLAWCHUHAI">
-  <link rel="canonical" href="https://aiclawchuhai.shop/">
+<meta property="og:title" content="AICLAWCHUHAI | 外贸获客 & WhatsApp开发客户工具">
+<meta property="og:description" content="帮助企业提升外贸客户开发效率与询盘转化。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aiclawchuhai.shop/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="外贸获客软件_外贸找客户_WhatsApp开发客户工具 - AICLAWCHUHAI">
-  <meta property="og:description" content="帮助企业提升外贸客户开发效率与询盘转化。">
-  <meta property="og:url" content="https://aiclawchuhai.shop/">
-  <meta property="og:site_name" content="AICLAWCHUHAI">
+<style>
+/* ===== 通用样式 ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;}
+body{background:#f5f9ff;color:#1e293b;line-height:1.8;}
+a{text-decoration:none;color:#2563eb;}
+a:hover{text-decoration:underline;}
+.container{max-width:1180px;margin:0 auto;padding:0 20px;}
 
-  <meta name="theme-color" content="#2563eb">
+/* ===== Header ===== */
+.site-header{position:sticky;top:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid #dbeafe;z-index:999;}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;height:72px;}
+.brand{font-size:24px;font-weight:800;color:#1d4ed8;}
+.nav a{margin-left:18px;font-weight:600;font-size:15px;color:#334155;}
+.nav a:hover{color:#2563eb;}
 
-  <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
-      background: #f5f9ff;
-      color: #1e293b;
-      line-height: 1.8;
-    }
-    a { color: #2563eb; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+/* ===== 幻灯片 ===== */
+.hero-slider{position:relative;overflow:hidden;margin-bottom:50px;border-radius:16px;}
+.slide{display:none;position:relative;transition:opacity 0.7s ease;}
+.slide.active{display:block;opacity:1;}
+.slide img{width:100%;border-radius:16px;}
+.slide-caption{position:absolute;bottom:20px;left:20px;background:rgba(0,0,0,0.5);color:#fff;padding:8px 12px;border-radius:8px;font-size:18px;}
+.slider-nav{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:8px;}
+.slider-dot{width:12px;height:12px;border-radius:50%;background:#fff;opacity:0.5;cursor:pointer;}
+.slider-dot.active{opacity:1;background:#2563eb;}
+.slider-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.3);color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;}
+.slider-arrow.left{left:10px;}
+.slider-arrow.right{right:10px;}
 
-    .container {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+/* ===== 卡片模块 ===== */
+.card,.case-card,.flow-card,.article-item{background:#fff;border-radius:16px;padding:24px;box-shadow:0 8px 24px rgba(15,23,42,.04);transition:transform 0.3s,box-shadow 0.3s;}
+.card img,.case-card img,.flow-card img,.article-item img{width:100%;border-radius:12px;margin-bottom:12px;}
+.card h3,.case-card h3,.flow-card h3,.article-item h3{margin-bottom:10px;font-size:20px;color:#0f172a;}
+.card p,.case-card p,.flow-card p,.article-item p{color:#475569;}
+.card:hover,.case-card:hover,.flow-card:hover,.article-item:hover{transform:translateY(-6px);box-shadow:0 12px 36px rgba(0,0,0,0.12);}
 
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #dbeafe;
-    }
-    .nav-wrap {
-      min-height: 72px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-    .brand {
-      font-size: 24px;
-      font-weight: 800;
-      color: #1d4ed8;
-      white-space: nowrap;
-    }
-    .nav {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-    .nav a {
-      color: #334155;
-      font-size: 15px;
-      font-weight: 600;
-    }
-    .nav a:hover {
-      color: #2563eb;
-      text-decoration: none;
-    }
+/* 流程模块 */
+.flow-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;text-align:center;}
+.flow-card img{width:80px;margin-bottom:12px;transition:transform 0.3s;}
+.flow-card:hover img{transform:scale(1.15);}
 
-    .hero {
-      background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 45%, #ffffff 100%);
-      padding: 70px 0 50px;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 0.9fr;
-      gap: 26px;
-      align-items: start;
-    }
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 14px;
-      padding: 6px 12px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #1d4ed8;
-      background: #dbeafe;
-      border-radius: 999px;
-    }
-    .hero h1 {
-      margin: 0 0 16px;
-      font-size: 44px;
-      line-height: 1.2;
-      color: #0f172a;
-    }
-    .hero .lead {
-      margin: 0 0 16px;
-      font-size: 17px;
-      color: #334155;
-    }
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin: 22px 0;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-weight: 700;
-      transition: .2s ease;
-    }
-    .btn-primary {
-      background: #2563eb;
-      color: #fff;
-      box-shadow: 0 8px 24px rgba(37,99,235,.25);
-    }
-    .btn-primary:hover {
-      background: #1d4ed8;
-      text-decoration: none;
-      transform: translateY(-1px);
-    }
-    .btn-secondary {
-      background: #fff;
-      color: #1d4ed8;
-      border: 1px solid #bfdbfe;
-    }
-    .btn-secondary:hover {
-      background: #eff6ff;
-      text-decoration: none;
-    }
-    .hero-list {
-      margin: 18px 0 0;
-      padding-left: 20px;
-      color: #334155;
-    }
+/* 动态数字 */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:24px;margin-top:24px;text-align:center;}
+.stat-item h3{font-size:28px;color:#2563eb;margin-bottom:6px;}
+.stat-item p{color:#475569;font-size:16px;}
 
-    .contact-panel {
-      background: #ffffff;
-      border: 1px solid #dbeafe;
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(37,99,235,.08);
-    }
-    .contact-panel h2 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 24px;
-      color: #0f172a;
-    }
-    .contact-item {
-      display: block;
-      margin: 10px 0;
-      padding: 12px 14px;
-      border-radius: 12px;
-      background: #f8fbff;
-      border: 1px solid #e0ecff;
-      color: #1e293b;
-      font-weight: 600;
-      word-break: break-all;
-    }
-    .contact-item strong {
-      color: #1d4ed8;
-    }
-    .contact-tip {
-      margin-top: 12px;
-      color: #475569;
-      font-size: 14px;
-    }
+/* CTA */
+.cta{background:linear-gradient(135deg,#1d4ed8 0%,#2563eb 50%,#3b82f6 100%);color:#fff;}
+.cta-box{display:grid;grid-template-columns:1.2fr 0.8fr;gap:24px;align-items:start;}
+.cta-box a{color:#fff;display:block;margin-top:8px;}
+.cta-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:16px;padding:20px;}
 
-    .section {
-      padding: 68px 0;
-    }
-    .section-title {
-      margin: 0 0 12px;
-      font-size: 34px;
-      color: #0f172a;
-      line-height: 1.3;
-    }
-    .section-desc {
-      margin: 0 0 28px;
-      color: #475569;
-    }
+/* Footer */
+.site-footer{background:#0f172a;color:#cbd5e1;padding:30px 0;}
+.footer-wrap{display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;}
+.footer-links a{color:#93c5fd;margin-left:14px;}
 
-    .grid-2, .grid-3 {
-      display: grid;
-      gap: 20px;
-    }
-    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
-
-    .card {
-      background: #fff;
-      border: 1px solid #e2e8f0;
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 8px 24px rgba(15,23,42,.04);
-    }
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 20px;
-      color: #0f172a;
-    }
-    .card p, .card li {
-      color: #475569;
-    }
-    .card ul {
-      margin: 10px 0 0;
-      padding-left: 20px;
-    }
-
-    .soft-box {
-      background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
-      border: 1px solid #dbeafe;
-      border-radius: 22px;
-      padding: 26px;
-    }
-
-    .article-item {
-      background: #fff;
-      border: 1px solid #e2e8f0;
-      border-radius: 18px;
-      padding: 22px;
-      margin-bottom: 16px;
-      box-shadow: 0 8px 24px rgba(15,23,42,.04);
-    }
-    .article-item h3 {
-      margin: 0 0 8px;
-      font-size: 21px;
-    }
-    .article-item p {
-      margin: 0 0 10px;
-      color: #475569;
-    }
-
-    .faq-item {
-      background: #fff;
-      border: 1px solid #e2e8f0;
-      border-radius: 18px;
-      padding: 22px;
-      margin-bottom: 14px;
-    }
-    .faq-item h3 {
-      margin: 0 0 8px;
-      font-size: 19px;
-    }
-    .faq-item p {
-      margin: 0;
-      color: #475569;
-    }
-
-    .cta {
-      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #3b82f6 100%);
-      color: #fff;
-    }
-    .cta .section-title,
-    .cta p,
-    .cta li,
-    .cta a {
-      color: #fff;
-    }
-    .cta-box {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 24px;
-      align-items: start;
-    }
-    .cta-card {
-      background: rgba(255,255,255,.12);
-      border: 1px solid rgba(255,255,255,.25);
-      border-radius: 20px;
-      padding: 24px;
-      backdrop-filter: blur(6px);
-    }
-    .cta-card ul {
-      padding-left: 20px;
-      margin: 12px 0 0;
-    }
-
-    .site-footer {
-      background: #0f172a;
-      color: #cbd5e1;
-      padding: 30px 0;
-    }
-    .footer-wrap {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-    .footer-links a {
-      color: #93c5fd;
-    }
-
-    @media (max-width: 900px) {
-      .hero-grid,
-      .grid-2,
-      .grid-3,
-      .cta-box {
-        grid-template-columns: 1fr;
-      }
-      .hero h1 {
-        font-size: 32px;
-      }
-      .section-title {
-        font-size: 28px;
-      }
-    }
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"AICLAWCHUHAI",
-    "url":"https://aiclawchuhai.shop/"
-  }
-  </script>
+/* 响应式 */
+@media(max-width:900px){
+.hero-slider,.grid-2,.grid-3,.flow-grid,.cta-box{grid-template-columns:1fr;}
+.section-title{font-size:28px;}
+}
+</style>
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="/">AICLAWCHUHAI</a>
-      <nav class="nav">
-        <a href="/">首页</a>
-        <a href="#pain">常见问题</a>
-        <a href="#services">解决方案</a>
-        <a href="#articles">文章内容</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">联系我</a>
-      </nav>
-    </div>
-  </header>
+<!-- Header -->
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="/">AICLAWCHUHAI</a>
+<nav class="nav">
+<a href="/">首页</a>
+<a href="#services">服务</a>
+<a href="#cases">案例</a>
+<a href="#articles">文章</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">联系</a>
+</nav>
+</div>
+</header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">外贸找客户 · 外贸获客软件 · WhatsApp开发客户</p>
-          <h1>帮企业解决外贸找客户难、开发效率低、询盘少的问题</h1>
-          <p class="lead">
-            AICLAWCHUHAI 提供外贸获客方法、客户开发思路、Google找客户方案、WhatsApp开发客户路径与内容增长支持，
-            帮助企业更高效地获取潜在客户，提升开发效率，并把搜索流量逐步变成咨询线索。
-          </p>
-          <p class="lead">
-            如果你正在做外贸、跨境业务、工厂出海或者海外客户开发，这里可以先帮你理清方法，再逐步找到更适合自己的获客路径。
-          </p>
+<!-- 幻灯片 -->
+<section class="hero-slider">
+<div class="slide active"><img src="img/office1.jpg" alt="办公环境"><div class="slide-caption">AI外贸获客方案，高效精准</div></div>
+<div class="slide"><img src="img/team.jpg" alt="团队"><div class="slide-caption">专业团队助力客户开发</div></div>
+<div class="slide"><img src="img/services.jpg" alt="服务场景"><div class="slide-caption">WhatsApp & Telegram多渠道获客</div></div>
+<div class="slider-arrow left">&#10094;</div>
+<div class="slider-arrow right">&#10095;</div>
+<div class="slider-nav"><span class="slider-dot active"></span><span class="slider-dot"></span><span class="slider-dot"></span></div>
+</section>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#articles">先看文章内容</a>
-            <a class="btn btn-secondary" href="#contact">直接联系我</a>
-          </div>
+<!-- 服务模块 -->
+<section id="services" class="section">
+<div class="container">
+<h2 class="section-title">我们的服务</h2>
+<p class="section-desc">覆盖外贸获客、Google/WhatsApp开发客户及内容引流多场景</p>
+<div class="grid-3">
+<div class="card"><img src="img/google-lead.jpg" alt="Google找客户"><h3>Google找客户</h3><p>通过精准搜索潜在客户，提高海外开发效率。</p></div>
+<div class="card"><img src="img/whatsapp-lead.jpg" alt="WhatsApp开发客户"><h3>WhatsApp开发客户</h3><p>即时沟通，提升转化率，实现高效成交闭环。</p></div>
+<div class="card"><img src="img/content-marketing.jpg" alt="内容引流"><h3>内容引流</h3><p>文章、FAQ、落地页结合，让客户主动找到你。</p></div>
+<div class="card"><img src="img/tiktok.jpg" alt="TikTok获客"><h3>TikTok/社媒矩阵</h3><p>短视频与社媒矩阵化发布，吸引海外精准流量。</p></div>
+<div class="card"><img src="img/saas-platform.jpg" alt="SaaS平台"><h3>AI全渠道SaaS平台</h3><p>整合短视频、社媒矩阵、群发、客服、询盘管理，形成完整获客系统。</p></div>
+<div class="card"><img src="img/seo.jpg" alt="SEO优化"><h3>SEO/GEO优化</h3><p>围绕城市、国家、行业做文章集群，提升搜索排名和曝光量。</p></div>
+</div>
+</div>
+</section>
 
-          <ul class="hero-list">
-            <li>适合外贸公司、工厂、跨境业务团队</li>
-            <li>覆盖找客户、客户开发、内容引流、效率提升</li>
-            <li>支持百度、谷歌、必应、搜狗等搜索布局</li>
-          </ul>
-        </div>
+<!-- 案例模块 -->
+<section id="cases" class="section">
+<div class="container">
+<h2 class="section-title">客户案例</h2>
+<p class="section-desc">展示我们帮助客户成功的实际案例</p>
+<div class="grid-3">
+<div class="case-card"><img src="img/case1.jpg" alt="客户A案例"><h3>客户A成功案例</h3><p>通过Google获客策略，客户海外开发效率提升50%，咨询量翻倍。</p></div>
+<div class="case-card"><img src="img/case2.jpg" alt="客户B案例"><h3>客户B成功案例</h3><p>WhatsApp群发结合智能筛选，客户转化率提升30%，成交额增长40%。</p></div>
+<div class="case-card"><img src="img/case3.jpg" alt="客户C案例"><h3>客户C成功案例</h3><p>短视频矩阵+社媒矩阵结合SEO内容，带来大量潜在客户咨询。</p></div>
+<div class="case-card"><img src="img/case4.jpg" alt="客户D案例"><h3>客户D成功案例</h3><p>内容引流+Telegram群组管理，使潜在客户主动联系企业，销售效率提升50%。</p></div>
+<div class="case-card"><img src="img/case5.jpg" alt="客户E案例"><h3>客户E成功案例</h3><p>AI SaaS整合平台实施，帮助客户统一管理海外询盘，减少人工成本。</p></div>
+<div class="case-card"><img src="img/case6.jpg" alt="客户F案例"><h3>客户F成功案例</h3><p>SEO+GEO优化落地页，关键词排名提升至首页，搜索流量显著增加。</p></div>
+</div>
+</div>
+</section>
 
-        <aside class="contact-panel">
-          <h2>快速联系</h2>
-          <a class="contact-item" href="https://t.me/aiclawchuhai" target="_blank" rel="noopener">
-            <strong>Telegram：</strong>@aiclawchuhai
-          </a>
-          <a class="contact-item" href="https://wa.me/85252195605" target="_blank" rel="noopener">
-            <strong>WhatsApp：</strong>+852 5219 5605
-          </a>
-          <a class="contact-item" href="weixin://dl/chat?17276592029">
-            <strong>微信：</strong>17276592029
-          </a>
-          <p class="contact-tip">如果你正在做外贸找客户、客户开发或私域转化，可以先看文章，再选择合适方式联系。</p>
-        </aside>
-      </div>
-    </section>
+<!-- 文章模块 -->
+<section id="articles" class="section">
+<div class="container">
+<h2 class="section-title">相关文章</h2>
+<div class="grid-3">
+<div class="article-item"><img src="img/article1.jpg" alt="外贸找客户"><h3>外贸怎么找客户？5种有效方法</h3><p>分享海外客户开发流程、精准搜索技巧及联系方式管理方法。</p><a href="#" class="read-more">阅读全文</a></div>
+<div class="article-item"><img src="img/article2.jpg" alt="外贸获客方法"><h3>外贸获客方法有哪些？</h3><p>从传统方式到互联网获客方法，帮助企业建立系统化获客流程。</p><a href="#" class="read-more">阅读全文</a></div>
+<div class="article-item"><img src="img/article3.jpg" alt="Google找客户"><h3>如何用Google找客户？</h3><p>详细讲解外贸人如何通过Google搜索找到潜在客户并提升开发效率。</p><a href="#" class="read-more">阅读全文</a></div>
+<div class="article-item"><img src="img/article4.jpg" alt="WhatsApp开发客户"><h3>WhatsApp开发客户技巧</h3><p>分享AI工具群发、客户筛选与转化策略。</p><a href="#" class="read-more">阅读全文</a></div>
+<div class="article-item"><img src="img/article5.jpg" alt="内容引流获客"><h3>内容引流获客实战指南</h3><p>如何通过文章、FAQ和落地页引流，增加潜在客户访问量。</p><a href="#" class="read-more">阅读全文</a></div>
+<div class="article-item"><img src="img/article6.jpg" alt="TikTok获客"><h3>TikTok AI获客策略</h3><p>短视频矩阵发布与私域导流结合，实现内容转化最大化。</p><a href="#" class="read-more">阅读全文</a></div>
+</div>
+</div>
+</section>
 
-    <section id="pain" class="section">
-      <div class="container">
-        <h2 class="section-title">外贸找客户，为什么越来越难？</h2>
-        <p class="section-desc">
-          很多企业并不是没有产品，而是没有形成稳定的客户来源。传统开发方式越来越卷，客户注意力也越来越分散，导致很多团队投入很多时间，却没有明显结果。
-        </p>
+<!-- FAQ模块 -->
+<section id="faq" class="section">
+<div class="container">
+<h2 class="section-title">常见问题</h2>
+<div class="card"><h3>外贸找客户最难的是什么？</h3><p>通常不是产品，而是没有稳定的客户来源，不知道如何持续找到精准客户。</p></div>
+<div class="card"><h3>为什么开发信越来越难做？</h3><p>竞争激烈、模板泛滥、客户注意力分散，传统方式效率下降。</p></div>
+<div class="card"><h3>如何提升WhatsApp开发客户转化率？</h3><p>通过群发、筛选、智能客服结合AI工具，优化沟通流程，提高转化率。</p></div>
+<div class="card"><h3>SEO与GEO优化对获客重要吗？</h3><p>合理布局文章、关键词、落地页和城市页，可显著提高搜索流量和潜在客户访问量。</p></div>
+<div class="card"><h3>如何快速建立私域客户池？</h3><p>通过Telegram群组、WhatsApp群发及内容引流，将潜在客户转化为私域资源。</p></div>
+<div class="card"><h3>AI SaaS平台能帮什么？</h3><p>整合社媒矩阵、短视频矩阵、群发、客服、CRM管理，实现全流程获客闭环。</p></div>
+</div>
+</section>
 
-        <div class="grid-3">
-          <article class="card">
-            <h3>开发信回复率越来越低</h3>
-            <p>模板化严重、竞争太高、客户信息不精准，都会导致开发信效果越来越差。</p>
-          </article>
-          <article class="card">
-            <h3>平台流量不稳定</h3>
-            <p>过度依赖平台，一旦流量下滑或者规则变化，询盘量很容易受到影响。</p>
-          </article>
-          <article class="card">
-            <h3>手动开发效率太低</h3>
-            <p>手动找客户、筛选客户、联系客户，流程长、成本高、也不利于持续放大。</p>
-          </article>
-        </div>
-      </div>
-    </section>
+<!-- CTA模块 -->
+<section id="contact" class="section cta">
+<div class="container cta-box">
+<div>
+<h2 class="section-title">立即联系</h2>
+<p>外贸获客、客户开发、内容引流，可以直接联系我们获取方案。</p>
+<a href="https://t.me/aiclawchuhai" class="btn">Telegram 联系</a>
+<a href="https://wa.me/85252195605" class="btn">WhatsApp 联系</a>
+<p>微信：17276592029</p>
+</div>
+<div class="cta-card">
+<h3>快速访问</h3>
+<ul>
+<li><a href="/">首页</a></li>
+<li><a href="/sitemap.xml">sitemap.xml</a></li>
+<li><a href="/robots.txt">robots.txt</a></li>
+</ul>
+</div>
+</div>
+</section>
 
-    <section id="services" class="section">
-      <div class="container">
-        <h2 class="section-title">更有效的外贸获客方式</h2>
-        <p class="section-desc">
-          找客户不是拼谁做得多，而是拼谁的方法更对。方法对了，客户获取才会更稳定。
-        </p>
+<!-- Footer -->
+<footer class="site-footer">
+<div class="container footer-wrap">
+<div><strong>AICLAWCHUHAI</strong><div>外贸获客软件 & WhatsApp开发客户</div></div>
+<div class="footer-links">
+<a href="/">首页</a>
+<a href="/sitemap.xml">站点地图</a>
+<a href="/robots.txt">robots</a>
+</div>
+</div>
+</footer>
 
-        <div class="grid-2">
-          <article class="card">
-            <h3>Google 找客户</h3>
-            <p>通过关键词、行业、国家组合搜索找到潜在客户，而不是盲目群发，提高开发精准度。</p>
-            <ul>
-              <li>定位更清晰</li>
-              <li>筛选更精准</li>
-              <li>适合长期开发</li>
-            </ul>
-          </article>
+<script>
+// 幻灯片JS
+let slideIndex=0;
+const slides=document.querySelectorAll('.slide');
+const dots=document.querySelectorAll('.slider-dot');
+const nextSlide=(n)=>{
+slides[slideIndex].classList.remove('active');dots[slideIndex].classList.remove('active');
+slideIndex=(slideIndex+n+slides.length)%slides.length;
+slides[slideIndex].classList.add('active');dots[slideIndex].classList.add('active');
+};
+document.querySelector('.slider-arrow.left').onclick=()=>nextSlide(-1);
+document.querySelector('.slider-arrow.right').onclick=()=>nextSlide(1);
+dots.forEach((dot,i)=>dot.onclick=()=>{slides[slideIndex].classList.remove('active');dots[slideIndex].classList.remove('active');slideIndex=i;slides[slideIndex].classList.add('active');dots[slideIndex].classList.add('active');});
+setInterval(()=>nextSlide(1),5000);
 
-          <article class="card">
-            <h3>WhatsApp 开发客户</h3>
-            <p>相比邮件，WhatsApp 更快、更直接，也更适合建立联系和持续跟进。</p>
-            <ul>
-              <li>回复更快</li>
-              <li>联系更直接</li>
-              <li>转化更顺畅</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>内容引流获客</h3>
-            <p>通过文章、FAQ、落地页和持续更新，让客户先通过搜索看到你，而不是只靠主动找人。</p>
-            <ul>
-              <li>适合长期积累流量</li>
-              <li>有利于建立信任</li>
-              <li>搜索引擎更容易抓取</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>工具提升效率</h3>
-            <p>当客户开发从手工模式转向更系统的流程，效率和稳定性都会明显提升。</p>
-            <ul>
-              <li>减少重复劳动</li>
-              <li>提高找客户效率</li>
-              <li>帮助形成可复制流程</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="soft-box">
-          <h2 class="section-title">你的网站为什么不能只有“功能介绍”？</h2>
-          <p class="section-desc">
-            因为用户进入首页，最先想知道的不是你有多少功能，而是你能不能帮他解决外贸找客户、客户开发、询盘增长这些现实问题。
-            搜索引擎也一样，它们更喜欢能清楚解释主题、能回答问题、能提供内容入口的页面。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="articles" class="section">
-      <div class="container">
-        <h2 class="section-title">外贸找客户相关文章</h2>
-        <p class="section-desc">
-          建议先从下面这些文章开始看。它们既适合用户阅读，也适合搜索引擎理解你的网站主题。
-        </p>
-
-        <article class="article-item">
-          <h3><a href="/articles/waimao-zhao-kehu.html">外贸怎么找客户？5种有效方法</a></h3>
-          <p>适合新手和企业了解外贸找客户的常见方法、常见误区和基础思路。</p>
-          <a href="/articles/waimao-zhao-kehu.html">查看文章</a>
-        </article>
-
-        <article class="article-item">
-          <h3><a href="/articles/waimao-huoke-fangfa.html">外贸获客方法有哪些？</a></h3>
-          <p>从传统方式到互联网获客方式，帮助企业建立系统化获客思路。</p>
-          <a href="/articles/waimao-huoke-fangfa.html">查看文章</a>
-        </article>
-
-        <article class="article-item">
-          <h3><a href="/articles/google-zhao-kehu.html">如何用Google找客户？</a></h3>
-          <p>详细讲解外贸人如何通过 Google 搜索找到潜在客户并提升开发效率。</p>
-          <a href="/articles/google-zhao-kehu.html">查看文章</a>
-        </article>
-
-        <article class="article-item">
-          <h3><a href="/articles/waimao-kaifa-kehu.html">外贸开发客户的实用技巧</a></h3>
-          <p>从客户定位、沟通方式、持续跟进等角度，提升客户开发质量和成交率。</p>
-          <a href="/articles/waimao-kaifa-kehu.html">查看文章</a>
-        </article>
-
-        <article class="article-item">
-          <h3><a href="/articles/waimao-gongju.html">外贸找客户工具推荐</a></h3>
-          <p>了解常见工具类型，以及为什么越来越多企业开始重视效率提升。</p>
-          <a href="/articles/waimao-gongju.html">查看文章</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="faq" class="section">
-      <div class="container">
-        <h2 class="section-title">常见问题 FAQ</h2>
-
-        <div class="faq-item">
-          <h3>外贸找客户最难的是什么？</h3>
-          <p>通常不是产品，而是没有稳定的客户来源，不知道如何持续找到精准客户。</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>为什么开发信越来越难做？</h3>
-          <p>因为竞争高、模板多、客户注意力分散，传统方式的效率已经明显下降。</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>为什么首页要做得更丰富？</h3>
-          <p>因为搜索引擎不只是看标题，还会看正文、结构、关键词上下文和内链。首页内容更完整，更利于抓取和理解主题。</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>为什么要持续更新文章？</h3>
-          <p>持续更新会告诉搜索引擎你的网站是活跃的，也更容易覆盖更多搜索词和长尾流量。</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section cta">
-      <div class="container cta-box">
-        <div>
-          <p class="eyebrow" style="background:rgba(255,255,255,.15);color:#fff;">联系我</p>
-          <h2 class="section-title">想做外贸找客户、客户开发、内容引流，可以直接联系</h2>
-          <p>
-            只有首页不够，只有文章也不够。更好的做法是：首页负责承接和解释主题，文章负责覆盖更多搜索问题，联系方式负责承接咨询。
-          </p>
-          <p>
-            你可以先看文章，再通过下面方式联系我。
-          </p>
-        </div>
-
-        <aside class="cta-card">
-          <h3 style="margin-top:0;">联系方式</h3>
-          <ul>
-            <li><a href="https://t.me/aiclawchuhai" target="_blank" rel="noopener">Telegram：@aiclawchuhai</a></li>
-            <li><a href="https://wa.me/85252195605" target="_blank" rel="noopener">WhatsApp：+852 5219 5605</a></li>
-            <li>微信：17276592029</li>
-            <li><a href="/sitemap.xml">sitemap.xml</a></li>
-            <li><a href="/robots.txt">robots.txt</a></li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <div>
-        <strong>AICLAWCHUHAI</strong>
-        <div>外贸获客软件 · 外贸找客户 · WhatsApp开发客户</div>
-      </div>
-      <div class="footer-links">
-        <a href="/">首页</a>
-        <a href="/sitemap.xml">站点地图</a>
-        <a href="/robots.txt">robots</a>
-      </div>
-    </div>
-  </footer>
-
+// 动态数字滚动
+const stats=document.querySelectorAll('.stat-item h3');
+stats.forEach(stat=>{
+  const target=parseInt(stat.innerText.replace(/\D/g,''));
+  let count=0;
+  const speed=Math.ceil(target/100);
+  const interval=setInterval(()=>{
+    if(count>=target){stat.innerText=target;clearInterval(interval);}
+    else{count+=speed;stat.innerText=count;}
+  },30);
+});
+</script>
 </body>
 </html>
